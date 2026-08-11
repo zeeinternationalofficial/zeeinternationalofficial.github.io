@@ -1,1 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZEE INTERNATIONAL | Premium Clothing</title>
 
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f4f7fb;
+  color:#172033;
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:linear-gradient(135deg,#071a3d,#0b75c9);
+  color:white;
+  padding:14px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 4px 18px #0002;
+}
+
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo{
+  width:55px;
+  height:55px;
+  background:white;
+  border-radius:12px;
+  padding:4px;
+  object-fit:contain;
+}
+
+.brand{
+  font-size:22px;
+  font-weight:800;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:18px;
+  font-weight:700;
+}
+
+nav a:hover{
+  color:#ffd166;
+}
+
+/* HERO */
+.hero{
+  padding:85px 20px;
+  text-align:center;
+  color:white;
+  background:
+    radial-gradient(circle at 20% 20%,#00b7ff55,transparent 30%),
+    radial-gradient(circle at 80% 70%,#ffb40044,transparent 30%),
+    linear-gradient(135deg,#071a3d,#0c4b91,#0789d8);
+}
+
+.hero h1{
+  font-size:56px;
+  margin-bottom:15px;
+}
+
+.hero h2{
+  color:#ffd166;
+  margin-bottom:15px;
+}
+
+.hero p{
+  max-width:800px;
+  margin:0 auto 25px;
+  line-height:1.7;
+  font-size:18px;
+}
+
+.btn{
+  display:inline-block;
+  background:#ffd166;
+  color:#102044;
+  padding:14px 27px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:800;
+}
+
+/* SHOP */
+.section{
+  padding:65px 6%;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.title h2{
+  font-size:38px;
+  color:#09295c;
+  margin-bottom:8px;
+}
+
+.title p{
+  color:#667085;
+}
+
+/* PRODUCTS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.card{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 8px 25px #00000012;
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 32px #0000001c;
+}
+
+.card img{
+  width:100%;
+  height:330px;
+  object-fit:cover;
+  display:block;
+  background:#eef2f7;
+}
+
+.card-body{
+  padding:22px;
+}
+
+.badge{
+  display:inline-block;
+  background:#e8f4ff;
+  color:#0876c9;
+  padding:6px 10px;
+  border-radius:18px;
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.card h3{
+  font-size:24px;
+  color:#09295c;
+  margin-bottom:10px;
+}
+
+.card p{
+  color:#667085;
+  line-height:1.6;
+  margin-bottom:12px;
+}
+
+.card ul{
+  padding-left:19px;
+  color:#46536a;
+  line-height:1.7;
+  margin-bottom:14px;
+}
+
+.price{
+  font-size:20px;
+  font-weight:800;
+  color:#0b75c9;
+  margin-bottom:14px;
+}
+
+.order{
+  display:block;
+  text-align:center;
+  background:#20c46b;
+  color:white;
+  text-decoration:none;
+  padding:13px;
+  border-radius:10px;
+  font-weight:800;
+}
+
+/* ABOUT */
+.about{
+  padding:65px 8%;
+  background:white;
+  text-align:center;
+}
+
+.about h2,
+.contact h2{
+  font-size:36px;
+  margin-bottom:15px;
+  color:#09295c;
+}
+
+.about p{
+  max-width:850px;
+  margin:auto;
+  line-height:1.8;
+  color:#667085;
+  font-size:18px;
+}
+
+/* CONTACT */
+.contact{
+  padding:65px 20px;
+  text-align:center;
+  color:white;
+  background:linear-gradient(135deg,#09295c,#0b75c9);
+}
+
+.contact h2{
+  color:white;
+}
+
+.contact p{
+  margin-bottom:20px;
+}
+
+.whatsapp{
+  display:inline-block;
+  background:#20c46b;
+  color:white;
+  text-decoration:none;
+  padding:14px 25px;
+  border-radius:30px;
+  font-weight:800;
+}
+
+/* FOOTER */
+footer{
+  background:#06142d;
+  color:#cbd5e1;
+  text-align:center;
+  padding:25px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .hero h1{
+    font-size:43px;
+  }
+}
+
+@media(max-width:650px){
+  header{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  nav a{
+    margin:0 6px;
+    font-size:13px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:35px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+  <div class="logo-area">
+
+    <img src="logo.png"
+         class="logo"
+         alt="ZEE INTERNATIONAL Logo">
+
+    <div class="brand">
+      ZEE INTERNATIONAL
+    </div>
+
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</header>
+
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+  <h1>ZEE INTERNATIONAL</h1>
+
+  <h2>
+    Premium Clothing • Quality • Style • Comfort
+  </h2>
+
+  <p>
+    Discover premium-quality clothing designed for modern style,
+    comfort and confidence. Browse our collection and order
+    directly on WhatsApp.
+  </p>
+
+  <a class="btn" href="#shop">
+    Explore Collection
+  </a>
+
+</section>
+
+
+<!-- SHOP -->
+<section class="section" id="shop">
+
+  <div class="title">
+
+    <h2>
+      Our Collection
+    </h2>
+
+    <p>
+      Premium clothing collection — up to 100 products.
+    </p>
+
+  </div>
+
+
+  <!-- PRODUCTS WILL APPEAR HERE -->
+  <div class="grid" id="productGrid"></div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+  <h2>
+    About ZEE INTERNATIONAL
+  </h2>
+
+  <p>
+    ZEE INTERNATIONAL focuses on premium quality, modern designs
+    and customer satisfaction. We provide stylish and comfortable
+    clothing for individuals, teams, businesses and organizations.
+  </p>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+  <h2>
+    Contact Us
+  </h2>
+
+  <p>
+    Ready to place your order? Contact us directly on WhatsApp.
+  </p>
+
+  <a
+    class="whatsapp"
+    target="_blank"
+    href="https://wa.me/923298497907">
+    💬 Chat on WhatsApp
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <strong>
+    ZEE INTERNATIONAL
+  </strong>
+
+  <br>
+
+  Premium Clothing • Quality • Style • Comfort
+
+  <br><br>
+
+  © 2026 ZEE INTERNATIONAL. All Rights Reserved.
+
+</footer>
+
+
+<script>
+
+/*
+=================================================
+  ZEE INTERNATIONAL
+  100 PRODUCT SYSTEM
+=================================================
+
+  Bas GitHub mein photos upload karo:
+
+  shirt-01.png
+  shirt-02.png
+  shirt-03.png
+  ...
+  shirt-100.png
+
+  Website automatically cards bana degi.
+=================================================
+*/
+
+
+const productGrid =
+  document.getElementById("productGrid");
+
+
+/*
+  WhatsApp number
+
+  IMPORTANT:
+  Agar apna number change karna ho
+  to sirf neeche number change karo.
+
+  Pakistan example:
+  923001234567
+*/
+const whatsappNumber =
+  "923298497907";
+
+
+/*
+  100 PRODUCTS
+*/
+for(let i = 1; i <= 100; i++){
+
+  /*
+    Number ko 01, 02, 03...
+    format mein convert karna
+  */
+  const number =
+    String(i).padStart(2,"0");
+
+
+  /*
+    Image filename
+  */
+  const imageName =
+    `shirt-${number}.png`;
+
+
+  /*
+    Product name
+  */
+  const productName =
+    `Premium Shirt ${number}`;
+
+
+  /*
+    WhatsApp message
+  */
+  const message =
+    `Hello ZEE INTERNATIONAL, I want to order ${productName}.`;
+
+
+  /*
+    Product card
+  */
+  const card =
+  document.createElement("article");
+
+  card.className = "card";
+
+
+  card.innerHTML = `
+
+    <img
+      src="${imageName}"
+      alt="ZEE INTERNATIONAL ${productName}"
+      onerror="this.parentElement.style.display='none'"
+    >
+
+    <div class="card-body">
+
+      <span class="badge">
+        PREMIUM QUALITY
+      </span>
+
+      <h3>
+        ${productName}
+      </h3>
+
+      <p>
+        Premium quality clothing with a modern design,
+        comfortable fabric and stylish finish.
+        Perfect for casual wear, sports, teams,
+        businesses and custom orders.
+      </p>
+
+      <ul>
+
+        <li>
+          Premium quality fabric
+        </li>
+
+        <li>
+          Comfortable & breathable
+        </li>
+
+        <li>
+          Modern sublimation design
+        </li>
+
+        <li>
+          All sizes available
+        </li>
+
+      </ul>
+
+      <div class="price">
+        Contact for Price
+      </div>
+
+      <a
+        class="order"
+        target="_blank"
+        href="https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}">
+
+        💬 Order on WhatsApp
+
+      </a>
+
+    </div>
+
+  `;
+
+
+  /*
+    Card ko website mein add karo
+  */
+  productGrid.appendChild(card);
+
+}
+
+</script>
+
+</body>
+</html>
