@@ -1,1 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ZEE INTERNATIONAL | Premium Clothing</title>
 
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f7f7f7;
+  color:#071a33;
+}
+a{text-decoration:none;color:inherit}
+
+.topbar{
+  background:#06172d;
+  color:white;
+  height:35px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 6%;
+  font-size:14px;
+}
+
+.navbar{
+  height:78px;
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 6%;
+  box-shadow:0 2px 10px #0001;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.logo{
+  width:115px;
+  height:70px;
+  object-fit:contain;
+}
+
+.navlinks{
+  display:flex;
+  gap:35px;
+  align-items:center;
+  font-weight:bold;
+}
+
+.navlinks a:hover{color:#d99d22}
+
+.navbtn{
+  background:#09203d;
+  color:white;
+  padding:13px 22px;
+  border-radius:5px;
+}
+
+.hero{
+  min-height:480px;
+  background:
+    linear-gradient(90deg,#031326eF,#061b35d9,#03132670),
+    url("shirt-01.png") center/cover;
+  display:flex;
+  align-items:center;
+  padding:60px 8%;
+  color:white;
+}
+
+.hero-content{max-width:620px}
+
+.small-title{
+  color:#e3a52d;
+  font-size:20px;
+  letter-spacing:4px;
+  font-weight:bold;
+}
+
+.hero h1{
+  font-size:65px;
+  line-height:.95;
+  margin:15px 0;
+}
+
+.hero h1 span{color:#e3a52d}
+
+.hero p{
+  font-size:20px;
+  line-height:1.6;
+  margin-bottom:25px;
+}
+
+.gold-btn{
+  display:inline-block;
+  background:#dfa52e;
+  color:#071a33;
+  padding:16px 30px;
+  border-radius:6px;
+  font-weight:bold;
+  font-size:17px;
+}
+
+.features{
+  width:90%;
+  margin:-35px auto 40px;
+  background:#071d38;
+  color:white;
+  border-radius:12px;
+  padding:25px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  position:relative;
+  z-index:5;
+  box-shadow:0 10px 30px #0003;
+}
+
+.feature{
+  text-align:center;
+  border-right:1px solid #ffffff44;
+  padding:10px;
+}
+
+.feature:last-child{border:0}
+.feature b{display:block;font-size:17px;margin-bottom:7px}
+.feature span{color:#ddd}
+
+.section{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  padding:30px 0 70px;
+}
+
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:25px;
+}
+
+.section-title h2{
+  font-size:32px;
+}
+
+.section-title p{
+  color:#777;
+  margin-top:7px;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+.card{
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 18px #00000012;
+  transition:.3s;
+  border:1px solid #ddd;
+}
+
+.card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 15px 35px #0003;
+}
+
+.product-img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  display:block;
+  background:#eee;
+}
+
+.card-body{padding:16px}
+
+.badge{
+  display:inline-block;
+  background:#071d38;
+  color:white;
+  padding:5px 9px;
+  border-radius:4px;
+  font-size:11px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  font-size:18px;
+  margin-bottom:8px;
+}
+
+.card p{
+  color:#777;
+  font-size:14px;
+  line-height:1.5;
+  min-height:42px;
+}
+
+.whatsapp{
+  display:block;
+  text-align:center;
+  background:#071d38;
+  color:white;
+  padding:12px;
+  border-radius:5px;
+  margin-top:14px;
+  font-weight:bold;
+}
+
+.whatsapp:hover{
+  background:#dca52e;
+  color:#071d38;
+}
+
+.about{
+  background:#071d38;
+  color:white;
+  padding:60px 8%;
+  text-align:center;
+}
+
+.about h2{
+  color:#e0a52c;
+  font-size:35px;
+  margin-bottom:15px;
+}
+
+.about p{
+  max-width:800px;
+  margin:auto;
+  line-height:1.8;
+  color:#ddd;
+}
+
+.footer{
+  background:#031326;
+  color:white;
+  text-align:center;
+  padding:30px;
+}
+
+.float-wa{
+  position:fixed;
+  right:20px;
+  bottom:25px;
+  background:#25d366;
+  color:white;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:27px;
+  z-index:999;
+  box-shadow:0 5px 20px #0004;
+}
+
+@media(max-width:900px){
+  .products{grid-template-columns:repeat(2,1fr)}
+  .features{grid-template-columns:repeat(2,1fr)}
+  .navlinks{display:none}
+  .hero h1{font-size:48px}
+}
+
+@media(max-width:550px){
+  .products{grid-template-columns:1fr}
+  .features{grid-template-columns:1fr}
+  .hero{padding:50px 7%;min-height:450px}
+  .hero h1{font-size:42px}
+  .topbar{font-size:11px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <span>⭐ Premium Quality Clothing</span>
+  <span>WELCOME TO ZEE INTERNATIONAL</span>
+  <span>📞 0329 8497907</span>
+</div>
+
+<nav class="navbar">
+  <img src="logo.png" class="logo" alt="ZEE INTERNATIONAL">
+
+  <div class="navlinks">
+    <a href="#">HOME</a>
+    <a href="#shop">SHOP</a>
+    <a href="#about">ABOUT US</a>
+    <a href="#contact">CONTACT US</a>
+    <a class="navbtn" href="https://wa.me/923298497907">
+      🛍️ ORDER NOW
+    </a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="small-title">PREMIUM QUALITY</div>
+    <h1>CLOTHING<br><span>COLLECTION</span></h1>
+    <p>
+      Discover premium quality clothing designed for modern style,
+      comfort and confidence.
+    </p>
+    <a href="#shop" class="gold-btn">SHOP NOW →</a>
+  </div>
+</section>
+
+<div class="features">
+  <div class="feature">
+    <b>🏆 PREMIUM QUALITY</b>
+    <span>Finest Fabric</span>
+  </div>
+  <div class="feature">
+    <b>📦 EASY RETURNS</b>
+    <span>7 Days Return</span>
+  </div>
+  <div class="feature">
+    <b>🚚 FAST DELIVERY</b>
+    <span>All Over Pakistan</span>
+  </div>
+  <div class="feature">
+    <b>🎧 CUSTOMER SUPPORT</b>
+    <span>24/7 Support</span>
+  </div>
+</div>
+
+<section class="section" id="shop">
+
+  <div class="section-title">
+    <div>
+      <h2>OUR COLLECTION</h2>
+      <p>Explore our premium quality clothing</p>
+    </div>
+  </div>
+
+  <div class="products" id="products"></div>
+
+</section>
+
+<section class="about" id="about">
+  <h2>ABOUT ZEE INTERNATIONAL</h2>
+  <p>
+    ZEE INTERNATIONAL is a premium clothing brand focused on quality,
+    modern designs and comfortable fabrics. We provide stylish clothing
+    for customers looking for quality and value.
+  </p>
+</section>
+
+<footer class="footer" id="contact">
+  <h3>ZEE INTERNATIONAL</h3>
+  <p>Premium Quality Clothing</p>
+  <p>📞 0329 8497907</p>
+  <p>© 2026 ZEE INTERNATIONAL. All Rights Reserved.</p>
+</footer>
+
+<a class="float-wa" href="https://wa.me/923298497907">💬</a>
+
+<script>
+
+const products = document.getElementById("products");
+
+const names = [
+  "Premium Black Kurta",
+  "Royal Blue Kurta",
+  "Beige Premium Kurta",
+  "Bottle Green Kurta",
+  "Classic White Kurta",
+  "Premium Polo Shirt",
+  "Designer Casual Shirt",
+  "Premium Sports Shirt",
+  "Classic Cotton Shirt",
+  "Luxury Collection Shirt"
+];
+
+for(let i=1;i<=100;i++){
+
+  let number = String(i).padStart(2,"0");
+
+  let name = names[(i-1)%names.length];
+
+  let description =
+    "Premium quality fabric with a modern design. " +
+    "Comfortable, stylish and suitable for everyday wear.";
+
+  products.innerHTML += `
+    <div class="card">
+
+      <img
+        class="product-img"
+        src="shirt-${number}.png"
+        alt="${name}"
+        onerror="this.src='shirt-01.png'"
+      >
+
+      <div class="card-body">
+
+        <span class="badge">NEW</span>
+
+        <h3>${name}</h3>
+
+        <p>${description}</p>
+
+        <a
+          class="whatsapp"
+          href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL%2C%20I%20want%20to%20know%20the%20price%20of%20${encodeURIComponent(name)}"
+          target="_blank"
+        >
+          💬 MESSAGE FOR PRICE
+        </a>
+
+      </div>
+
+    </div>
+  `;
+}
+
+</script>
+
+</body>
+</html>
