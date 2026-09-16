@@ -6,443 +6,579 @@
 
 <title>ZEE INTERNATIONAL | Premium Clothing</title>
 
+<meta name="description" content="ZEE INTERNATIONAL - Premium clothing manufacturer offering T-shirts, hoodies, tracksuits, trousers, jackets and private label manufacturing worldwide.">
+
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f7f7f7;
-  color:#071a36;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#07111f;
+    color:#ffffff;
+    line-height:1.6;
 }
 
 a{
-  text-decoration:none;
+    text-decoration:none;
+    color:inherit;
 }
 
-/* TOP BAR */
-.topbar{
-  background:#06172d;
-  color:white;
-  height:35px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:0 7%;
-  font-size:14px;
+.top-bar{
+    background:#c9a227;
+    color:#07111f;
+    padding:9px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:14px;
+    font-weight:bold;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
-.topbar strong{
-  color:#e7ae32;
+header{
+    background:#07111f;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid rgba(201,162,39,.35);
 }
 
-/* NAVBAR */
 .navbar{
-  height:78px;
-  background:white;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 7%;
-  box-shadow:0 3px 15px rgba(0,0,0,.08);
-  position:sticky;
-  top:0;
-  z-index:1000;
+    max-width:1250px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
 }
 
 .logo{
-  width:78px;
-  height:auto;
+    width:75px;
+    height:75px;
+    object-fit:contain;
+    border-radius:50%;
 }
 
-.navlinks{
-  display:flex;
-  align-items:center;
-  gap:34px;
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
 }
 
-.navlinks a{
-  color:#071a36;
-  font-weight:bold;
-  font-size:15px;
+.nav-links a{
+    font-size:15px;
+    font-weight:bold;
+    transition:.3s;
 }
 
-.navlinks a:hover{
-  color:#d69b25;
+.nav-links a:hover{
+    color:#c9a227;
 }
 
 .order-btn{
-  background:#071d3a;
-  color:white !important;
-  padding:15px 25px;
-  border-radius:5px;
+    background:#c9a227;
+    color:#07111f;
+    padding:12px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
 }
 
 .order-btn:hover{
-  background:#d69b25 !important;
+    background:#fff;
+    transform:translateY(-2px);
 }
 
-/* HERO */
 .hero{
-  min-height:470px;
-  background:
-  linear-gradient(90deg,rgba(3,19,38,.98),rgba(3,19,38,.75)),
-  radial-gradient(circle at right,#183a62,#031326);
-  display:flex;
-  align-items:center;
-  padding:55px 10%;
-  position:relative;
-  overflow:hidden;
+    min-height:620px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px;
+    background:
+        linear-gradient(rgba(7,17,31,.85),rgba(7,17,31,.92)),
+        radial-gradient(circle at center,#18304d,#07111f 65%);
 }
 
 .hero-content{
-  position:relative;
-  z-index:2;
-  max-width:650px;
+    max-width:900px;
 }
 
-.small-title{
-  color:#e8ad32;
-  letter-spacing:4px;
-  font-weight:bold;
-  font-size:17px;
-  margin-bottom:15px;
+.hero-small{
+    color:#c9a227;
+    font-size:18px;
+    letter-spacing:4px;
+    font-weight:bold;
+    margin-bottom:12px;
 }
 
 .hero h1{
-  color:white;
-  font-size:65px;
-  line-height:.95;
-  margin-bottom:20px;
+    font-size:65px;
+    line-height:1.05;
+    margin-bottom:20px;
 }
 
 .hero h1 span{
-  color:#dca52e;
+    color:#c9a227;
 }
 
 .hero p{
-  color:#d8e0ea;
-  font-size:19px;
-  margin-bottom:30px;
+    max-width:700px;
+    margin:0 auto 30px;
+    color:#d4d9df;
+    font-size:18px;
 }
 
-.shop-btn{
-  display:inline-block;
-  background:#dca52e;
-  color:white;
-  padding:16px 32px;
-  border-radius:6px;
-  font-weight:bold;
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
-.shop-btn:hover{
-  background:#f0bd49;
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
 }
 
-/* FEATURES */
-.features{
-  width:86%;
-  margin:-30px auto 45px;
-  background:#061b37;
-  border-radius:10px;
-  color:white;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  position:relative;
-  z-index:5;
-  box-shadow:0 10px 25px rgba(0,0,0,.2);
+.btn-gold{
+    background:#c9a227;
+    color:#07111f;
 }
 
-.feature{
-  padding:23px 20px;
-  text-align:center;
-  border-right:1px solid #8d6925;
+.btn-dark{
+    border:1px solid #c9a227;
+    color:#fff;
 }
 
-.feature:last-child{
-  border-right:none;
+.btn:hover{
+    transform:translateY(-3px);
 }
 
-.feature .icon{
-  color:#e1a72e;
-  font-size:28px;
-  margin-bottom:8px;
-}
-
-.feature h3{
-  font-size:15px;
-  margin-bottom:5px;
-}
-
-.feature p{
-  color:#cbd4df;
-  font-size:13px;
-}
-
-/* COLLECTION */
-.collection{
-  width:86%;
-  margin:auto;
-  padding-bottom:70px;
+.section{
+    max-width:1250px;
+    margin:auto;
+    padding:80px 20px;
 }
 
 .section-title{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:28px;
+    text-align:center;
+    margin-bottom:45px;
 }
 
-.title-left h2{
-  font-size:31px;
-  color:#071a36;
+.section-title .small{
+    color:#c9a227;
+    font-weight:bold;
+    letter-spacing:3px;
+    font-size:14px;
 }
 
-.title-left p{
-  color:#777;
-  margin-top:7px;
+.section-title h2{
+    font-size:42px;
+    margin:8px 0;
 }
 
-.title-line{
-  width:100px;
-  height:3px;
-  background:#d9a32e;
-  display:inline-block;
-  margin-left:15px;
-  vertical-align:middle;
+.section-title p{
+    color:#aeb7c2;
 }
 
-.view-btn{
-  background:#071b36;
-  color:white;
-  padding:13px 20px;
-  border-radius:5px;
-  font-size:13px;
-  font-weight:bold;
+.features{
+    background:#0b192b;
 }
 
-/* PRODUCTS */
+.feature-grid{
+    max-width:1250px;
+    margin:auto;
+    padding:50px 20px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.feature{
+    text-align:center;
+    padding:25px;
+    background:#101f32;
+    border:1px solid rgba(201,162,39,.2);
+    border-radius:12px;
+}
+
+.feature-icon{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.feature h3{
+    color:#c9a227;
+    margin-bottom:5px;
+}
+
+.feature p{
+    color:#aeb7c2;
+    font-size:14px;
+}
+
 .products{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:24px;
+    background:#07111f;
 }
 
-.product{
-  background:white;
-  border-radius:12px;
-  overflow:hidden;
-  border:1px solid #e1e1e1;
-  box-shadow:0 5px 18px rgba(0,0,0,.08);
-  transition:.3s;
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
 }
 
-.product:hover{
-  transform:translateY(-7px);
-  box-shadow:0 15px 30px rgba(0,0,0,.14);
+.product-card{
+    background:#0d1b2d;
+    border:1px solid rgba(201,162,39,.2);
+    border-radius:14px;
+    overflow:hidden;
+    transition:.3s;
 }
 
-.product-img{
-  width:100%;
-  height:330px;
-  object-fit:cover;
-  display:block;
-  background:#eee;
+.product-card:hover{
+    transform:translateY(-7px);
+    border-color:#c9a227;
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+}
+
+.product-image{
+    height:330px;
+    background:#ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
 }
 
 .product-info{
-  padding:18px;
+    padding:20px;
 }
 
 .badge{
-  display:inline-block;
-  background:#071c38;
-  color:white;
-  padding:7px 11px;
-  border-radius:5px;
-  font-size:11px;
-  margin-bottom:10px;
+    display:inline-block;
+    background:#c9a227;
+    color:#07111f;
+    padding:4px 9px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+    margin-bottom:10px;
 }
 
-.product h3{
-  color:#071a36;
-  font-size:18px;
-  margin-bottom:8px;
+.product-info h3{
+    font-size:19px;
+    margin-bottom:7px;
 }
 
-.product p{
-  color:#777;
-  line-height:1.5;
-  font-size:14px;
-  min-height:80px;
-  margin-bottom:15px;
+.product-info p{
+    color:#aeb7c2;
+    font-size:13px;
+    min-height:45px;
+    margin-bottom:15px;
+}
+
+.price-btn{
+    display:block;
+    text-align:center;
+    background:#c9a227;
+    color:#07111f;
+    padding:11px;
+    border-radius:7px;
+    font-weight:bold;
+    font-size:14px;
+    transition:.3s;
+}
+
+.price-btn:hover{
+    background:#fff;
+}
+
+.manufacturing{
+    background:#0b192b;
+    text-align:center;
+}
+
+.manufacturing-box{
+    max-width:900px;
+    margin:auto;
+    padding:55px 25px;
+    border:1px solid rgba(201,162,39,.35);
+    border-radius:18px;
+    background:#101f32;
+}
+
+.manufacturing-box h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.manufacturing-box h2 span{
+    color:#c9a227;
+}
+
+.manufacturing-box p{
+    color:#c4cbd3;
+    margin-bottom:25px;
+}
+
+.manufacturing-list{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.manufacturing-list span{
+    border:1px solid rgba(201,162,39,.5);
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+.about{
+    background:#07111f;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-text h2{
+    font-size:42px;
+    margin-bottom:18px;
+}
+
+.about-text h2 span{
+    color:#c9a227;
+}
+
+.about-text p{
+    color:#b8c0ca;
+    margin-bottom:15px;
+}
+
+.about-box{
+    background:#0d1b2d;
+    padding:35px;
+    border-radius:15px;
+    border:1px solid rgba(201,162,39,.25);
+}
+
+.about-box h3{
+    color:#c9a227;
+    margin-bottom:15px;
+}
+
+.about-box ul{
+    list-style:none;
+}
+
+.about-box li{
+    padding:8px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.contact{
+    background:#0b192b;
+    text-align:center;
+}
+
+.contact-box{
+    max-width:800px;
+    margin:auto;
+}
+
+.contact-box h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.contact-box h2 span{
+    color:#c9a227;
+}
+
+.contact-box p{
+    color:#b8c0ca;
+    margin-bottom:25px;
+}
+
+.contact-details{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.contact-item{
+    background:#101f32;
+    border:1px solid rgba(201,162,39,.25);
+    padding:15px 22px;
+    border-radius:10px;
+}
+
+.contact-item strong{
+    color:#c9a227;
+}
+
+footer{
+    background:#050c15;
+    text-align:center;
+    padding:30px 20px;
+    border-top:1px solid rgba(201,162,39,.25);
+}
+
+footer .brand{
+    color:#c9a227;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+footer p{
+    color:#8994a1;
+    font-size:13px;
 }
 
 .whatsapp{
-  display:block;
-  text-align:center;
-  background:#071b36;
-  color:white;
-  padding:13px 8px;
-  border-radius:6px;
-  font-weight:bold;
-  font-size:13px;
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25d366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    z-index:9999;
+    box-shadow:0 5px 20px rgba(0,0,0,.4);
+    transition:.3s;
 }
 
 .whatsapp:hover{
-  background:#dca52e;
+    transform:scale(1.1);
 }
 
-/* ABOUT */
-.about{
-  background:#061a34;
-  color:white;
-  padding:60px 10%;
-  text-align:center;
+@media(max-width:1000px){
+    .product-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .feature-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .nav-links{
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
 }
 
-.about h2{
-  font-size:32px;
-  margin-bottom:15px;
+@media(max-width:750px){
+    .top-bar{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .navbar{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .logo{
+        width:65px;
+        height:65px;
+    }
+
+    .nav-links{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .order-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:550px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .section-title h2,
+    .manufacturing-box h2,
+    .about-text h2,
+    .contact-box h2{
+        font-size:32px;
+    }
 }
 
-.about h2 span{
-  color:#dca52e;
-}
+@media(max-width:500px){
+    .feature-grid,
+    .product-grid{
+        grid-template-columns:1fr;
+    }
 
-.about p{
-  max-width:800px;
-  margin:auto;
-  color:#cbd5e2;
-  line-height:1.7;
-}
+    .product-image{
+        height:360px;
+    }
 
-/* FOOTER */
-footer{
-  background:#030e1d;
-  color:#aaa;
-  text-align:center;
-  padding:25px;
-  font-size:13px;
-}
+    .hero h1{
+        font-size:36px;
+    }
 
-footer strong{
-  color:#e0a52d;
-}
+    .hero p{
+        font-size:15px;
+    }
 
-/* WHATSAPP */
-.whatsapp-float{
-  position:fixed;
-  right:25px;
-  bottom:25px;
-  width:58px;
-  height:58px;
-  background:#25d366;
-  color:white;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:29px;
-  z-index:9999;
-  box-shadow:0 5px 18px rgba(0,0,0,.3);
-}
-
-/* MOBILE */
-@media(max-width:900px){
-
-  .navlinks{
-    gap:12px;
-  }
-
-  .navlinks a{
-    font-size:12px;
-  }
-
-  .hero h1{
-    font-size:45px;
-  }
-
-  .products{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .features{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .feature:nth-child(2){
-    border-right:none;
-  }
-}
-
-@media(max-width:600px){
-
-  .topbar{
-    font-size:10px;
-    padding:0 4%;
-  }
-
-  .navbar{
-    padding:0 4%;
-    height:70px;
-  }
-
-  .logo{
-    width:65px;
-  }
-
-  .navlinks{
-    gap:8px;
-  }
-
-  .navlinks a:nth-child(3){
-    display:none;
-  }
-
-  .order-btn{
-    padding:10px 12px;
-  }
-
-  .hero{
-    padding:50px 7%;
-    min-height:430px;
-  }
-
-  .hero h1{
-    font-size:42px;
-  }
-
-  .features{
-    width:92%;
-    grid-template-columns:1fr 1fr;
-  }
-
-  .collection{
-    width:92%;
-  }
-
-  .section-title{
-    display:block;
-  }
-
-  .view-btn{
-    display:inline-block;
-    margin-top:15px;
-  }
-
-  .products{
-    grid-template-columns:1fr;
-  }
-
-  .product-img{
-    height:auto;
-    max-height:500px;
-    object-fit:cover;
-  }
+    .section{
+        padding:60px 15px;
+    }
 }
 </style>
 </head>
@@ -450,595 +586,462 @@ footer strong{
 <body>
 
 <!-- TOP BAR -->
-<div class="topbar">
-  <div>⭐ Premium Quality Clothing</div>
-  <div><strong>WELCOME TO ZEE INTERNATIONAL</strong></div>
-  <div>📱 0329 8497907</div>
+<div class="top-bar">
+    <div>⭐ Premium Quality Clothing</div>
+    <div>WELCOME TO ZEE INTERNATIONAL</div>
+    <div>📱 0329 8497907</div>
 </div>
 
 <!-- NAVBAR -->
-<nav class="navbar">
+<header>
+    <nav class="navbar">
 
-  <img src="logo.png" class="logo" alt="ZEE INTERNATIONAL">
+        <a href="#home" class="logo-area">
+            <img src="logo.png" alt="ZEE INTERNATIONAL Logo" class="logo">
+        </a>
 
-  <div class="navlinks">
+        <div class="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#shop">SHOP</a>
+            <a href="#about">ABOUT US</a>
+            <a href="#contact">CONTACT US</a>
+            <a class="order-btn"
+               href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20to%20place%20an%20order"
+               target="_blank">
+               🛍️ ORDER NOW
+            </a>
+        </div>
 
-    <a href="#home">HOME</a>
-
-    <a href="#collection">SHOP</a>
-
-    <a href="#about">ABOUT US</a>
-
-    <a href="#contact">CONTACT US</a>
-
-    <a class="order-btn"
-       href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20to%20place%20an%20order"
-       target="_blank">
-      🛍️ ORDER NOW
-    </a>
-
-  </div>
-
-</nav>
+    </nav>
+</header>
 
 <!-- HERO -->
 <section class="hero" id="home">
+    <div class="hero-content">
 
-  <div class="hero-content">
+        <div class="hero-small">ZEE INTERNATIONAL</div>
 
-    <div class="small-title">PREMIUM QUALITY</div>
+        <h1>
+            PREMIUM QUALITY<br>
+            <span>CLOTHING COLLECTION</span>
+        </h1>
 
-    <h1>
-      CLOTHING<br>
-      <span>COLLECTION</span>
-    </h1>
+        <p>
+            Premium quality clothing with modern designs,
+            comfortable fabrics and stylish finishing.
+            We manufacture clothing for brands and businesses worldwide.
+        </p>
 
-    <p>
-      Premium quality clothing with modern designs,
-      comfortable fabrics and stylish finishing.
-    </p>
+        <div class="hero-buttons">
+            <a href="#shop" class="btn btn-gold">SHOP NOW →</a>
 
-    <a href="#collection" class="shop-btn">
-      SHOP NOW &nbsp; →
-    </a>
+            <a href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20to%20discuss%20bulk%20clothing%20manufacturing"
+               target="_blank"
+               class="btn btn-dark">
+               💬 GET A QUOTE
+            </a>
+        </div>
 
-  </div>
-
+    </div>
 </section>
 
 <!-- FEATURES -->
 <section class="features">
+    <div class="feature-grid">
 
-  <div class="feature">
-    <div class="icon">🏅</div>
-    <h3>PREMIUM QUALITY</h3>
-    <p>Finest Fabric</p>
-  </div>
+        <div class="feature">
+            <div class="feature-icon">⭐</div>
+            <h3>PREMIUM QUALITY</h3>
+            <p>Finest Fabric & Quality Finishing</p>
+        </div>
 
-  <div class="feature">
-    <div class="icon">📦</div>
-    <h3>EASY RETURNS</h3>
-    <p>7 Days Return</p>
-  </div>
+        <div class="feature">
+            <div class="feature-icon">🔄</div>
+            <h3>EASY RETURNS</h3>
+            <p>7 Days Return Policy</p>
+        </div>
 
-  <div class="feature">
-    <div class="icon">🚚</div>
-    <h3>FAST DELIVERY</h3>
-    <p>All Over Pakistan</p>
-  </div>
+        <div class="feature">
+            <div class="feature-icon">🚚</div>
+            <h3>FAST DELIVERY</h3>
+            <p>Delivery Available Worldwide</p>
+        </div>
 
-  <div class="feature">
-    <div class="icon">🎧</div>
-    <h3>CUSTOMER SUPPORT</h3>
-    <p>24/7 Support</p>
-  </div>
+        <div class="feature">
+            <div class="feature-icon">💬</div>
+            <h3>CUSTOMER SUPPORT</h3>
+            <p>Contact Us Through WhatsApp</p>
+        </div>
 
+    </div>
 </section>
 
-<!-- COLLECTION -->
-<section class="collection" id="collection">
+<!-- PRODUCTS -->
+<section class="products section" id="shop">
 
-  <div class="section-title">
-
-    <div class="title-left">
-
-      <h2>
-        OUR COLLECTION
-        <span class="title-line"></span>
-      </h2>
-
-      <p>Explore our premium quality clothing</p>
-
+    <div class="section-title">
+        <div class="small">OUR COLLECTION</div>
+        <h2>Premium Clothing</h2>
+        <p>Explore our latest clothing products</p>
     </div>
 
-    <a href="#collection" class="view-btn">
-      VIEW ALL PRODUCTS
-    </a>
+    <div class="product-grid">
 
-  </div>
+        <!-- PRODUCT 01 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="shirt-01.png" alt="Premium Sublimation Shirt">
+            </div>
+            <div class="product-info">
+                <span class="badge">SUBLIMATION</span>
+                <h3>Premium Sublimation Shirt</h3>
+                <p>High-quality sublimation shirt with modern printing and comfortable fabric.</p>
+                <a class="price-btn" href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20the%20Premium%20Sublimation%20Shirt" target="_blank">💬 MESSAGE FOR PRICE</a>
+            </div>
+        </div>
 
-  <div class="products">
+        <!-- PRODUCT 02 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="shirt-02.png" alt="Premium Sports Shirt">
+            </div>
+            <div class="product-info">
+                <span class="badge">SPORTSWEAR</span>
+                <h3>Premium Sports Shirt</h3>
+                <p>Comfortable and stylish sports shirt suitable for teams, brands and activewear.</p>
+                <a class="price-btn" href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20the%20Premium%20Sports%20Shirt" target="_blank">💬 MESSAGE FOR PRICE</a>
+            </div>
+        </div>
 
-    <!-- PRODUCT 1 -->
-    <div class="product">
+        <!-- PRODUCT 03 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="shirt-03.png" alt="Premium Casual Polo">
+            </div>
+            <div class="product-info">
+                <span class="badge">POLO</span>
+                <h3>Premium Casual Polo</h3>
+                <p>Stylish casual polo made for everyday fashion and clothing brands.</p>
+                <a class="price-btn" href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20the%20Premium%20Casual%20Polo" target="_blank">💬 MESSAGE FOR PRICE</a>
+            </div>
+        </div>
 
-      <img src="shirt-01.png"
-           class="product-img"
-           alt="Premium Sublimation Shirt">
+        <!-- PRODUCT 04 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="shirt-04.png" alt="Premium Blue White Polo">
+            </div>
+            <div class="product-info">
+                <span class="badge">POLO</span>
+                <h3>Premium Blue & White Polo</h3>
+                <p>Modern blue and white polo design with quality fabric and clean finishing.</p>
+                <a class="price-btn" href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20the%20Blue%20and%20White%20Polo" target="_blank">💬 MESSAGE FOR PRICE</a>
+            </div>
+        </div>
 
-      <div class="product-info">
+        <!-- PRODUCT 05 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="shirt-05.png" alt="Premium Green White Polo">
+            </div>
+            <div class="product-info">
+                <span class="badge">POLO</span>
+                <h3>Premium Green & White Polo</h3>
+                <p>Fresh green and white polo suitable for fashion brands and bulk orders.</p>
+                <a class="price-btn" href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20the%20Green%20and%20White%20Polo" target="_blank">💬 MESSAGE FOR PRICE</a>
+            </div>
+        </div>
 
-        <span class="badge">NEW</span>
+        <!-- PRODUCT 06 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="shirt-06.png" alt="Royal Blue Sports Shirt">
+            </div>
+            <div class="product-info">
+                <span class="badge">SPORTSWEAR</span>
+                <h3>Royal Blue Sports Shirt</h3>
+                <p>Royal blue sportswear design with comfortable fit and quality finishing.</p>
+                <a class="price-btn" href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20the%20Royal%20Blue%20Sports%20Shirt" target="_blank">💬 MESSAGE FOR PRICE</a>
+            </div>
+        </div>
 
-        <h3>Premium Sublimation Shirt</h3>
+        <!-- PRODUCT 07 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="shirt-07.png" alt="Black Red Premium Polo">
+            </div>
+            <div class="product-info">
+                <span class="badge">POLO</span>
+                <h3>Black & Red Premium Polo</h3>
+                <p>Bold black and red polo design with a modern premium look.</p>
+                <a class="price-btn" href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20the%20Black%20and%20Red%20Premium%20Polo" target="_blank">💬 MESSAGE FOR PRICE</a>
+            </div>
+        </div>
 
-        <p>
-          Premium quality sublimation shirt with
-          comfortable fabric and stylish design.
-          Perfect for casual and everyday wear.
-        </p>
+        <!-- PRODUCT 08 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="shirt-08.png" alt="Green Black Sublimation Shirt">
+            </div>
+            <div class="product-info">
+                <span class="badge">SUBLIMATION</span>
+                <h3>Green & Black Sublimation Shirt</h3>
+                <p>Modern sublimation design manufactured with quality materials.</p>
+                <a class="price-btn" href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20the%20Green%20and%20Black%20Sublimation%20Shirt" target="_blank">💬 MESSAGE FOR PRICE</a>
+            </div>
+        </div>
 
-        <a class="whatsapp"
-           href="https://wa.me/923298497907?text=Hello,%20I%20am%20interested%20in%20Premium%20Sublimation%20Shirt"
-           target="_blank">
-          💬 MESSAGE FOR PRICE
-        </a>
+        <!-- PRODUCT 09 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="shirt-09.png" alt="Blue Gold Sublimation Shirt">
+            </div>
+            <div class="product-info">
+                <span class="badge">SUBLIMATION</span>
+                <h3>Blue & Gold Sublimation Shirt</h3>
+                <p>Premium blue and gold sublimation design for modern clothing collections.</p>
+                <a class="price-btn" href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20the%20Blue%20and%20Gold%20Sublimation%20Shirt" target="_blank">💬 MESSAGE FOR PRICE</a>
+            </div>
+        </div>
 
-      </div>
+        <!-- PRODUCT 10 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="shirt-10.png" alt="Premium Sublimation Shirt 10">
+            </div>
+            <div class="product-info">
+                <span class="badge">SUBLIMATION</span>
+                <h3>Premium Sublimation Shirt 10</h3>
+                <p>Trendy sublimation shirt designed for premium clothing collections.</p>
+                <a class="price-btn" href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20Premium%20Sublimation%20Shirt%2010" target="_blank">💬 MESSAGE FOR PRICE</a>
+            </div>
+        </div>
+
+        <!-- PRODUCT 11 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="tracksuit-red.png" alt="Black Red Premium Tracksuit">
+            </div>
+            <div class="product-info">
+                <span class="badge">TRACKSUIT</span>
+                <h3>Black & Red Premium Tracksuit</h3>
+                <p>Stylish tracksuit design suitable for sportswear and fashion brands.</p>
+                <a class="price-btn" href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20the%20Black%20and%20Red%20Premium%20Tracksuit" target="_blank">💬 MESSAGE FOR PRICE</a>
+            </div>
+        </div>
+
+        <!-- PRODUCT 12 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="tracksuit-blue.png" alt="Blue Gold Premium Tracksuit">
+            </div>
+            <div class="product-info">
+                <span class="badge">TRACKSUIT</span>
+                <h3>Blue & Gold Premium Tracksuit</h3>
+                <p>Premium blue and gold tracksuit manufactured for modern sportswear collections.</p>
+                <a class="price-btn" href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20the%20Blue%20and%20Gold%20Premium%20Tracksuit" target="_blank">💬 MESSAGE FOR PRICE</a>
+            </div>
+        </div>
+
+        <!-- NEW PRODUCT 01 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="product-1.jpg" alt="ZEE INTERNATIONAL Product 1">
+            </div>
+            <div class="product-info">
+                <span class="badge">NEW ARRIVAL</span>
+                <h3>New Clothing Collection</h3>
+                <p>Quality clothing manufactured for fashion brands, bulk orders and private labeling.</p>
+                <a class="price-btn" href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20Product%201" target="_blank">💬 MESSAGE FOR PRICE</a>
+            </div>
+        </div>
+
+        <!-- NEW PRODUCT 02 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="product-2.jpg" alt="ZEE INTERNATIONAL Product 2">
+            </div>
+            <div class="product-info">
+                <span class="badge">NEW ARRIVAL</span>
+                <h3>New Premium Clothing</h3>
+                <p>Custom clothing manufacturing with quality materials and professional finishing.</p>
+                <a class="price-btn" href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20Product%202" target="_blank">💬 MESSAGE FOR PRICE</a>
+            </div>
+        </div>
+
+        <!-- NEW PRODUCT 03 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="product-3.jpg" alt="ZEE INTERNATIONAL Product 3">
+            </div>
+            <div class="product-info">
+                <span class="badge">NEW ARRIVAL</span>
+                <h3>Premium Brand Collection</h3>
+                <p>Manufacturing solution for brands looking for bulk and private label clothing orders.</p>
+                <a class="price-btn" href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20Product%203" target="_blank">💬 MESSAGE FOR PRICE</a>
+            </div>
+        </div>
+
     </div>
+</section>
 
+<!-- MANUFACTURING -->
+<section class="manufacturing">
+    <div class="section">
 
-    <!-- PRODUCT 2 -->
-    <div class="product">
+        <div class="manufacturing-box">
 
-      <img src="shirt-02.png"
-           class="product-img"
-           alt="Premium Sports Shirt">
+            <div class="section-title" style="margin-bottom:20px;">
+                <div class="small">MANUFACTURING WORLDWIDE</div>
+                <h2>Build Your Brand With <span>ZEE INTERNATIONAL</span></h2>
+            </div>
 
-      <div class="product-info">
+            <p>
+                Looking for a reliable clothing manufacturer?
+                We manufacture clothing for brands, businesses,
+                teams and private labels. Contact us for your bulk order.
+            </p>
 
-        <span class="badge">NEW</span>
+            <div class="manufacturing-list">
+                <span>👕 T-Shirts</span>
+                <span>🏃 Track Suits</span>
+                <span>🧥 Hoodies</span>
+                <span>👖 Trousers</span>
+                <span>🧥 Jackets</span>
+                <span>🏷️ Private Label</span>
+                <span>📦 Bulk Orders</span>
+            </div>
 
-        <h3>Premium Sports Shirt</h3>
+            <a href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20to%20manufacture%20my%20clothing%20brand%20with%20you"
+               target="_blank"
+               class="btn btn-gold">
+               💬 START YOUR ORDER
+            </a>
 
-        <p>
-          Stylish sports sublimation shirt designed
-          for comfort, performance and durability.
-          Ideal for sports and active wear.
-        </p>
+        </div>
 
-        <a class="whatsapp"
-           href="https://wa.me/923298497907?text=Hello,%20I%20am%20interested%20in%20Premium%20Sports%20Shirt"
-           target="_blank">
-          💬 MESSAGE FOR PRICE
-        </a>
-
-      </div>
     </div>
-
-
-    <!-- PRODUCT 3 -->
-    <div class="product">
-
-      <img src="shirt-03.png"
-           class="product-img"
-           alt="Premium Casual Polo">
-
-      <div class="product-info">
-
-        <span class="badge">NEW</span>
-
-        <h3>Premium Casual Polo</h3>
-
-        <p>
-          Modern premium polo with comfortable fabric,
-          stylish finishing and durable colors.
-          Perfect for casual everyday styling.
-        </p>
-
-        <a class="whatsapp"
-           href="https://wa.me/923298497907?text=Hello,%20I%20am%20interested%20in%20Premium%20Casual%20Polo"
-           target="_blank">
-          💬 MESSAGE FOR PRICE
-        </a>
-
-      </div>
-    </div>
-
-
-    <!-- PRODUCT 4 -->
-    <div class="product">
-
-      <img src="shirt-04.png"
-           class="product-img"
-           alt="Premium Blue White Polo">
-
-      <div class="product-info">
-
-        <span class="badge">NEW</span>
-
-        <h3>Premium Blue & White Polo</h3>
-
-        <p>
-          Premium sublimation polo with breathable
-          fabric, stylish design and durable colors.
-          A smart choice for everyday wear.
-        </p>
-
-        <a class="whatsapp"
-           href="https://wa.me/923298497907?text=Hello,%20I%20am%20interested%20in%20Premium%20Blue%20%26%20White%20Polo"
-           target="_blank">
-          💬 MESSAGE FOR PRICE
-        </a>
-
-      </div>
-    </div>
-
-
-    <!-- PRODUCT 5 -->
-    <div class="product">
-
-      <img src="shirt-05.png"
-           class="product-img"
-           alt="Premium Green White Polo">
-
-      <div class="product-info">
-
-        <span class="badge">NEW</span>
-
-        <h3>Premium Green & White Polo</h3>
-
-        <p>
-          Elegant sublimation polo featuring premium
-          fabric, comfortable fit and sweat-wicking
-          performance for active lifestyles.
-        </p>
-
-        <a class="whatsapp"
-           href="https://wa.me/923298497907?text=Hello,%20I%20am%20interested%20in%20Premium%20Green%20%26%20White%20Polo"
-           target="_blank">
-          💬 MESSAGE FOR PRICE
-        </a>
-
-      </div>
-    </div>
-
-
-    <!-- PRODUCT 6 -->
-    <div class="product">
-
-      <img src="shirt-06.png"
-           class="product-img"
-           alt="Royal Blue Sports Shirt">
-
-      <div class="product-info">
-
-        <span class="badge">NEW</span>
-
-        <h3>Royal Blue Sports Shirt</h3>
-
-        <p>
-          Modern sports sublimation shirt designed
-          for comfort, performance and premium style.
-          Great for sports and training.
-        </p>
-
-        <a class="whatsapp"
-           href="https://wa.me/923298497907?text=Hello,%20I%20am%20interested%20in%20Royal%20Blue%20Sports%20Shirt"
-           target="_blank">
-          💬 MESSAGE FOR PRICE
-        </a>
-
-      </div>
-    </div>
-
-
-    <!-- PRODUCT 7 -->
-    <div class="product">
-
-      <img src="shirt-07.png"
-           class="product-img"
-           alt="Black Red Premium Polo">
-
-      <div class="product-info">
-
-        <span class="badge">NEW</span>
-
-        <h3>Black & Red Premium Polo</h3>
-
-        <p>
-          Stylish black and red sublimation polo
-          with premium finishing, comfortable fabric
-          and a bold modern look.
-        </p>
-
-        <a class="whatsapp"
-           href="https://wa.me/923298497907?text=Hello,%20I%20am%20interested%20in%20Black%20%26%20Red%20Premium%20Polo"
-           target="_blank">
-          💬 MESSAGE FOR PRICE
-        </a>
-
-      </div>
-    </div>
-
-
-    <!-- PRODUCT 8 -->
-    <div class="product">
-
-      <img src="shirt-08.png"
-           class="product-img"
-           alt="Green Black White Sublimation Shirt">
-
-      <div class="product-info">
-
-        <span class="badge">NEW</span>
-
-        <h3>Green & Black Sublimation Shirt</h3>
-
-        <p>
-          Modern green, black and white sublimation shirt
-          featuring bold diagonal graphics, comfortable
-          fabric and ZEE INTERNATIONAL branding.
-        </p>
-
-        <a class="whatsapp"
-           href="https://wa.me/923298497907?text=Hello,%20I%20am%20interested%20in%20Green%20%26%20Black%20Sublimation%20Shirt"
-           target="_blank">
-          💬 MESSAGE FOR PRICE
-        </a>
-
-      </div>
-    </div>
-
-
-    <!-- PRODUCT 9 -->
-    <div class="product">
-
-      <img src="shirt-09.png"
-           class="product-img"
-           alt="Blue Gold Sublimation Shirt">
-
-      <div class="product-info">
-
-        <span class="badge">NEW</span>
-
-        <h3>Blue & Gold Sublimation Shirt</h3>
-
-        <p>
-          Premium blue, white and golden sublimation shirt
-          with a stylish geometric sporty design,
-          comfortable fabric and durable colors.
-        </p>
-
-        <a class="whatsapp"
-           href="https://wa.me/923298497907?text=Hello,%20I%20am%20interested%20in%20Blue%20%26%20Gold%20Sublimation%20Shirt"
-           target="_blank">
-          💬 MESSAGE FOR PRICE
-        </a>
-
-      </div>
-    </div>
-
-
-    <!-- PRODUCT 10 -->
-    <div class="product">
-
-      <img src="shirt-10.png"
-           class="product-img"
-           alt="Premium Sublimation Shirt 10">
-
-      <div class="product-info">
-
-        <span class="badge">NEW</span>
-
-        <h3>Premium Sublimation Shirt 10</h3>
-
-        <p>
-          Modern sublimation shirt with premium quality,
-          comfortable fabric, attractive design and
-          long-lasting colors.
-        </p>
-
-        <a class="whatsapp"
-           href="https://wa.me/923298497907?text=Hello,%20I%20am%20interested%20in%20Premium%20Sublimation%20Shirt%2010"
-           target="_blank">
-          💬 MESSAGE FOR PRICE
-        </a>
-
-      </div>
-    </div>
-
-
-    <!-- PRODUCT 11 -->
-    <div class="product">
-
-      <img src="tracksuit-red.png"
-           class="product-img"
-           alt="Black Red Premium Tracksuit">
-
-      <div class="product-info">
-
-        <span class="badge">TRACKSUIT</span>
-
-        <h3>Black & Red Premium Tracksuit</h3>
-
-        <p>
-          Premium quality black and red tracksuit set
-          featuring a stylish sublimation design,
-          comfortable fabric and matching shorts.
-          Perfect for sports, training, fitness and
-          casual wear. Available in all sizes.
-        </p>
-
-        <a class="whatsapp"
-           href="https://wa.me/923298497907?text=Hello,%20I%20am%20interested%20in%20Black%20%26%20Red%20Premium%20Tracksuit"
-           target="_blank">
-          💬 MESSAGE FOR PRICE
-        </a>
-
-      </div>
-    </div>
-
-
-    <!-- PRODUCT 12 -->
-    <div class="product">
-
-      <img src="tracksuit-blue.png"
-           class="product-img"
-           alt="Blue Gold Premium Tracksuit">
-
-      <div class="product-info">
-
-        <span class="badge">TRACKSUIT</span>
-
-        <h3>Blue & Gold Premium Tracksuit</h3>
-
-        <p>
-          Premium quality blue, white and gold tracksuit
-          set featuring a modern sporty design with
-          matching shorts. Comfortable, lightweight and
-          ideal for sports, training, fitness and casual
-          wear. Available in all sizes.
-        </p>
-
-        <a class="whatsapp"
-           href="https://wa.me/923298497907?text=Hello,%20I%20am%20interested%20in%20Blue%20%26%20Gold%20Premium%20Tracksuit"
-           target="_blank">
-          💬 MESSAGE FOR PRICE
-        </a>
-
-      </div>
-    </div>
-
-
-    <!-- PRODUCT 13 - YELLOW HOODIE SET -->
-    <div class="product">
-
-      <img src="product-13.jpg"
-           class="product-img"
-           alt="Yellow Premium Hoodie and Trouser Set">
-
-      <div class="product-info">
-
-        <span class="badge">NEW</span>
-
-        <h3>Yellow Premium Hoodie & Trouser Set</h3>
-
-        <p>
-          Eye-catching yellow hoodie and trouser set
-          with bold custom graphics and stylish streetwear
-          design. Ideal for fashion brands, bulk orders
-          and private label manufacturing.
-        </p>
-
-        <a class="whatsapp"
-           href="https://wa.me/923298497907?text=Hello,%20I%20am%20interested%20in%20Yellow%20Premium%20Hoodie%20%26%20Trouser%20Set"
-           target="_blank">
-          💬 MESSAGE FOR PRICE
-        </a>
-
-      </div>
-    </div>
-
-
-    <!-- PRODUCT 14 - RED ZIP HOODIE -->
-    <div class="product">
-
-      <img src="product-14.jpg"
-           class="product-img"
-           alt="Red Premium Zip Up Hoodie">
-
-      <div class="product-info">
-
-        <span class="badge">NEW</span>
-
-        <h3>Red Premium Zip-Up Hoodie</h3>
-
-        <p>
-          Stylish red zip-up hoodie with bold front
-          branding and detailed finishing. Perfect for
-          streetwear collections, custom designs and
-          private label clothing brands.
-        </p>
-
-        <a class="whatsapp"
-           href="https://wa.me/923298497907?text=Hello,%20I%20am%20interested%20in%20Red%20Premium%20Zip-Up%20Hoodie"
-           target="_blank">
-          💬 MESSAGE FOR PRICE
-        </a>
-
-      </div>
-    </div>
-
-
-    <!-- PRODUCT 15 - RED WHITE POLO -->
-    <div class="product">
-
-      <img src="product-15.jpg"
-           class="product-img"
-           alt="Red White Premium Polo Shirt">
-
-      <div class="product-info">
-
-        <span class="badge">NEW</span>
-
-        <h3>Red & White Premium Polo</h3>
-
-        <p>
-          Modern red and white striped polo with stylish
-          long sleeves and premium finishing. Suitable
-          for fashion brands, custom collections and
-          private label manufacturing.
-        </p>
-
-        <a class="whatsapp"
-           href="https://wa.me/923298497907?text=Hello,%20I%20am%20interested%20in%20Red%20%26%20White%20Premium%20Polo"
-           target="_blank">
-          💬 MESSAGE FOR PRICE
-        </a>
-
-      </div>
-    </div>
-
-  </div>
-
 </section>
 
 <!-- ABOUT -->
-<section class="about" id="about">
+<section class="about section" id="about">
 
-  <h2>
-    ABOUT <span>ZEE INTERNATIONAL</span>
-  </h2>
+    <div class="about-grid">
 
-  <p>
-    ZEE INTERNATIONAL brings premium quality clothing,
-    sublimation shirts, sportswear, hoodies, trousers,
-    jackets and modern tracksuits with a focus on comfort,
-    quality, stylish designs and professional finishing.
-    We also provide bulk orders and private label
-    manufacturing for clothing brands worldwide.
-  </p>
+        <div class="about-text">
+
+            <div class="section-title" style="text-align:left;margin-bottom:15px;">
+                <div class="small">ABOUT US</div>
+                <h2>Welcome to <span>ZEE INTERNATIONAL</span></h2>
+            </div>
+
+            <p>
+                ZEE INTERNATIONAL is a clothing manufacturing brand
+                focused on quality apparel and modern clothing production.
+            </p>
+
+            <p>
+                We manufacture different types of clothing including
+                T-shirts, tracksuits, hoodies, trousers and jackets.
+            </p>
+
+            <p>
+                We also work with clothing brands for bulk orders
+                and private label manufacturing.
+            </p>
+
+            <br>
+
+            <a href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20am%20interested%20in%20your%20clothing%20manufacturing%20services"
+               target="_blank"
+               class="btn btn-gold">
+               CONTACT US →
+            </a>
+
+        </div>
+
+        <div class="about-box">
+
+            <h3>Why Choose ZEE INTERNATIONAL?</h3>
+
+            <ul>
+                <li>✓ Quality Clothing Manufacturing</li>
+                <li>✓ Bulk Order Manufacturing</li>
+                <li>✓ Private Label Manufacturing</li>
+                <li>✓ Custom Clothing Production</li>
+                <li>✓ Modern Designs & Finishing</li>
+                <li>✓ Worldwide Manufacturing Services</li>
+                <li>✓ Direct WhatsApp Communication</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact section" id="contact">
+
+    <div class="contact-box">
+
+        <div class="section-title">
+            <div class="small">GET IN TOUCH</div>
+            <h2>Contact <span>ZEE INTERNATIONAL</span></h2>
+        </div>
+
+        <p>
+            Have a bulk order or private label clothing project?
+            Send us a message and discuss your requirements with our team.
+        </p>
+
+        <div class="contact-details">
+
+            <div class="contact-item">
+                📱 <strong>WhatsApp:</strong> 0329 8497907
+            </div>
+
+            <div class="contact-item">
+                📦 <strong>Bulk Orders:</strong> Available
+            </div>
+
+            <div class="contact-item">
+                🏷️ <strong>Private Label:</strong> Available
+            </div>
+
+        </div>
+
+        <a href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20to%20discuss%20a%20clothing%20manufacturing%20order"
+           target="_blank"
+           class="btn btn-gold">
+           💬 MESSAGE US ON WHATSAPP
+        </a>
+
+    </div>
 
 </section>
 
 <!-- FOOTER -->
-<footer id="contact">
+<footer>
 
-  © 2026 <strong>ZEE INTERNATIONAL</strong>
-  — Premium Quality Clothing
+    <div class="brand">ZEE INTERNATIONAL</div>
 
-  <br><br>
+    <p>
+        Premium Clothing Manufacturer | Bulk Orders | Private Label Manufacturing
+    </p>
 
-  📱 0329 8497907
+    <p style="margin-top:8px;">
+        © 2026 ZEE INTERNATIONAL. All Rights Reserved.
+    </p>
 
 </footer>
 
 <!-- FLOATING WHATSAPP -->
-<a class="whatsapp-float"
-   href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20to%20know%20about%20your%20products"
-   target="_blank">
-  💬
+<a class="whatsapp"
+   href="https://wa.me/923298497907?text=Hello%20ZEE%20INTERNATIONAL,%20I%20want%20to%20place%20a%20clothing%20order"
+   target="_blank"
+   aria-label="WhatsApp">
+   💬
 </a>
 
 </body>
